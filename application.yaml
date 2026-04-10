@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: online-boutique
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/jaypandya1/Gitops-kubernetes-infrastructure.git'
+    path: kubernetes/kubernetes-manifests
+    targetRevision: main
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: boutique
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
