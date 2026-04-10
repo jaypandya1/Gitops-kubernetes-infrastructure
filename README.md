@@ -10,6 +10,9 @@ Infrastructure is provisioned entirely via **Terraform**, while application depl
 
 -----
 
+<img width="1424" height="861" alt="ArgoCD" src="https://github.com/user-attachments/assets/cf21b8a7-4e38-49ab-8d7c-85ba9897cc39" />
+
+
 ## 🛠️ Tech Stack
 
 | Category | Tool / Technology |
@@ -21,6 +24,11 @@ Infrastructure is provisioned entirely via **Terraform**, while application depl
 | **Monitoring & Observability** | Prometheus, Grafana (Helm) |
 
 -----
+
+##  Grafana Dashboard
+
+<img width="1423" height="851" alt="Grafana" src="https://github.com/user-attachments/assets/747bd260-b011-4e0e-800d-33c8ddec13dc" />
+
 
 ## 🚧 Roadblocks & Lessons Learned
 
@@ -61,6 +69,9 @@ Connect your local `kubectl` to the newly provisioned EKS cluster:
 aws eks update-kubeconfig --region us-east-1 --name <your-cluster-name>
 ```
 
+<img width="1440" height="900" alt="Kubectl get pods" src="https://github.com/user-attachments/assets/42ad8e8c-6bce-4b79-8e2f-1d48b7ed4d59" />
+
+
 ### 3\. Install ArgoCD
 
 Deploy ArgoCD into the cluster to handle the GitOps synchronization:
@@ -85,5 +96,8 @@ Retrieve the DNS name of the AWS Classic Load Balancer routing to the frontend s
 ```bash
 kubectl get service frontend -n boutique
 ```
+
+<img width="1431" height="857" alt="Application" src="https://github.com/user-attachments/assets/9f365f7b-3336-41f5-aaa4-483653c5ece9" />
+
 
 > **Note:** *It may take 2-3 minutes for the AWS ELB health checks to pass and DNS to propagate before the site is reachable in your browser.*
