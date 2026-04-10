@@ -13,9 +13,9 @@ module "boutique_eks" {
   # THIS is where you put your specific node group!
   eks_managed_node_groups = {
     boutique_nodes = {
-      min_size       = 1
-      max_size       = 2
-      desired_size   = 1
+      desired_size   = 5
+      max_size       = 6
+      min_size       = 5
       instance_types = ["t3.small"]
       # Add your disk sizes here if needed!
     }
